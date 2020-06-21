@@ -1,4 +1,4 @@
-                       //****************** CHAPTER 11 - 25 ******************//
+                       //****************** CHAPTER 21 - 25 ******************//
 //Q1
 // var firstName = prompt("Enter first name")
 // var lastName = prompt("Enter last name")
@@ -325,6 +325,37 @@
 // else
 //   document.write("Its PM")
 
+//Q8
+// var laterDate = new Date(2020,11,31,0,0,0,0)
+// document.write(laterDate)
+
+//Q9
+// var ramzanDate = new Date(2020,5,18)
+// var currentDate = new Date()
+// var ramzanDay = ramzanDate.getTime()
+// var currentTime = currentDate.getTime()
+// var daysDifference = (currentTime-ramzanDay)/(1000*60*60*24)
+// var numberOfDays = Math.trunc(daysDifference)
+// document.write(numberOfDays + ' days have been passed since 1st Ramzan,2015')
+
+//Q10
+// var refDate = new Date(2015,11,5,22,50,16).getTime();
+// var beginDate = new Date(2015,0,1).getTime();
+// var secondDifference = (refDate-beginDate)/(1000);
+// document.write(secondDifference + ' Seconds have passed from Begining of 2015 to sat Dec 05 2015');
+
+//Q11
+// var currentDate = new Date();
+// document.write(currentHour);
+// var newDate = new Date(currentDate.getFullYear(),currentDate.getMonth(),currentDate.getDate(),currentHour);
+// document.write(newDate)
+
+//Q12
+// var currentDate = new Date()
+// var oldDate = new Date(currentDate.getFullYear()-100,currentDate.getMonth(),currentDate.getDate(),currentDate.getHours,currentDate.getSeconds(),currentDate.getMilliseconds())
+// console.log(currentDate)
+// console.log(oldDate)
+
 //Q13
 // var age = parseInt(prompt("Enter your age"))
 // var dateTime = new Date()
@@ -455,9 +486,52 @@
 //Q11
 // function camelCase(str) {
 //   var strArr = str.split(" ")
-//   var resultStr
+//   var resultStr = ""
 //   for(i = 0; i < strArr.length; i++) {
-//     str[i] = str[i][0].toUpperCase()
+//     var currentStr = strArr[i]
+//     resultStr += currentStr[0].toUpperCase() + currentStr.substring(1)
+//     resultStr += " "
 //   }
+//   document.write(resultStr)
 // }
-document.write(camelCase("hello dt vhtut vh"))
+// camelCase("the quick brown fox")
+
+//Q12
+// function LongestWord(str) {
+//   var strSplit = str.split(' ')
+//   var WordLength = 0
+//   var longestWord = ""
+//   for(var i = 0; i < strSplit.length; i++){
+//     if(strSplit[i].length > WordLength){
+//       WordLength = strSplit[i].length
+//       longestWord = strSplit[i]
+//     }
+//   }
+//   return longestWord
+// }
+// document.write(LongestWord("Web Development Tutorial"))
+
+//Q13
+// function find(str, letter) {
+//   var count = 0
+//   for(i = 0; i< str.length; i++) {
+//     if(str[i] == letter) {
+//       count += 1
+//     }
+//   }
+//   document.write(count)
+// }
+// find("JSResourceS.com","S")
+
+//Q14
+// var pie = 3.14
+// function calcCircumference(r) {
+//   cir = 2 * pie * r
+//   document.write("The circumference is " + cir + "<br>")
+// }
+// function calcArea(r) {
+//   area = pie * r * r
+//   document.write("The area is " + area)
+// }
+// calcCircumference(4)
+// calcArea(4)
